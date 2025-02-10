@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Lethal Area
+  - Enemy
+  - EnemyHeadCheck
+  - Opposum
+  - Eagle
+  - Frog
   layers:
   - Default
   - TransparentFX
@@ -13,7 +19,7 @@ TagManager:
   - UI
   - Ground
   - Player
-  - 
+  - Enemy
   - 
   - 
   - 
@@ -53,8 +59,11 @@ TagManager:
   - name: Decoration2
     uniqueID: 1970337107
     locked: 0
-  - name: Colliders
+  - name: Safe Colliders
     uniqueID: 948068183
+    locked: 0
+  - name: Lethal Colliders
+    uniqueID: 627538891
     locked: 0
   - name: Inclined
     uniqueID: 1211145201

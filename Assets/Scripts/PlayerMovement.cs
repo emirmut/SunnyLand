@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -40,8 +41,13 @@ public class PlayerMovement : MonoBehaviour
 
     // Used for physics-related updates
     void FixedUpdate() { // Used to apply the input to the player
-        controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump); // Time.fixedDeltaTime allows us to move the player at a constant speed
-        jump = false;
+        // if (controller.m_lives > 0) {
+            controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump); // Time.fixedDeltaTime allows us to move the player at a constant speed
+            jump = false;
+        // } else {
+        //     Time.timeScale = 0;
+        //     // SceneManager.LoadScene("GameOverScene");
+        // }
     }
 
     public void OnLanding() {
