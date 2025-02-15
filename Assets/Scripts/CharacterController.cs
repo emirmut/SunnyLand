@@ -7,23 +7,26 @@ public class CharacterController : MonoBehaviour {
 	private bool m_wasCrouching = false;										// Whether or not a player was crouching in the last frame
 	[Range(0, 0.3f)] [SerializeField] private float m_MovementSmoothing = 0.05f;// How much to smooth out the movement
 	[SerializeField] private bool m_AirControl = true;							// Whether or not a player can steer while jumping;
-	[SerializeField] private LayerMask m_WhatIsGround;							// A mask determining what is ground to the character
+	[SerializeField] private LayerMask m_WhatIsSafeArea;						// A mask determining what is safe area to the character
 	[SerializeField] private Transform m_GroundCheck;							// A position marking where to check if the player is grounded.
 	[SerializeField] private Transform m_CeilingCheck;							// A position marking where to check for ceilings
 	[SerializeField] private Collider2D m_CrouchDisableCollider;				// A collider that will be disabled when crouching
-	[SerializeField] public int m_lives = 3;
-	private const float k_knockbackForceX = 5f;
-	private const float k_knockbackForceY = 3f;
+	[SerializeField] public int m_lives = 3;									// How many lives left for player to die 
+	private const float k_enemyKnockbackForceX = 5f;
+	private const float k_enemyKnockbackForceY = 3f;
+	private const float k_lethalAreaKnockBackForce = 10f;
 	public float m_knockbackCounter;
 	public float k_knockbackLength = 0.3f;
 	public bool m_knockbackedFromRight;
+	public bool m_isCollidedWithEnemy;
+	public bool m_isCollidedWithLethalArea;
 	[SerializeField] private Animator animator;
 
 	const float k_GroundedRadius = 0.2f; // Radius of the overlap circle to determine if grounded
-	private bool m_Grounded;             // Whether or not the player is grounded.
-	const float k_CeilingRadius = 0.2f;  // Radius of the overlap circle to determine if the player can stand up
+	public bool m_Grounded;             // Whether or not the player is grounded.
 	private bool m_FacingRight = true;   // For determining which way the player is currently facing.
-	private Vector3 m_Velocity = Vector3.zero;
+	public bool m_hasPlatformBeneath;
+	private Vector2 m_Velocity = Vector2.zero;
 	private Rigidbody2D m_rb2d;
 
 	[Header("Events")]
@@ -50,27 +53,32 @@ public class CharacterController : MonoBehaviour {
 	private void FixedUpdate() {
 		bool wasGrounded = m_Grounded;
 		m_Grounded = false;
-		Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
-		for (int i = 0; i < colliders.Length; i++) {
-			if (colliders[i].gameObject != gameObject) {
-				m_Grounded = true;
+		Collider2D[] safeColliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsSafeArea);
+		for (int i = 0; i < safeColliders.Length; i++) {
+			if (safeColliders[i].gameObject != gameObject) {
+				if (!safeColliders[i].isTrigger) { // this "if block" is needed. Otherwise, player would be able to jump while it is on triggered colliders in platforms. 
+					m_Grounded = true;
+				}
 				if (!wasGrounded) {
 					OnLandEvent.Invoke();
 				}
 			}
 		}
+		if (!m_Grounded) {
+			animator.SetBool("isJumping", true);
+		}
 	}
 
-	public void Move(float move, bool crouch, bool jump) {
-		// Only control the player if grounded or airControl is turned on while the player is not knockbacked
-		if ((m_Grounded || m_AirControl) && m_knockbackCounter <= 0) {
+	public void Move(float moveX, float moveY, bool crouch, bool jump, bool lookingUp, bool climb) {
+		// Only control the player if grounded or airControl is turned on while the player is not knockbacked and not looking up
+		if ((m_Grounded || m_AirControl) && m_knockbackCounter <= 0 && !lookingUp) {
 			animator.SetBool("isHurt", false);
 			if (crouch) {
 				if (!m_wasCrouching) {
 					m_wasCrouching = true;
 					OnCrouchEvent.Invoke(true);
 				}
-				move *= m_CrouchSpeed;
+				moveX *= m_CrouchSpeed;
 				// Disable one of the colliders when crouching (In this case, this colider is the Box Collider of the Player)
 				if (m_CrouchDisableCollider != null) {
 					m_CrouchDisableCollider.enabled = false;
@@ -82,32 +90,48 @@ public class CharacterController : MonoBehaviour {
 				}
 				// Enable the collider when not crouching
 				if (m_CrouchDisableCollider != null) {
-					m_CrouchDisableCollider.enabled = true;
+					if (!m_hasPlatformBeneath) {
+						m_CrouchDisableCollider.enabled = true;
+					}
 				}
 			}
 
-			Vector3 targetVelocity = new Vector2(move, m_rb2d.linearVelocity.y);
-			m_rb2d.linearVelocity = Vector3.SmoothDamp(m_rb2d.linearVelocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
+			Vector2 targetVelocityX = new Vector2(moveX, m_rb2d.linearVelocity.y);
+			m_rb2d.linearVelocity = Vector2.SmoothDamp(m_rb2d.linearVelocity, targetVelocityX, ref m_Velocity, m_MovementSmoothing);
+
+			if (climb) {
+				m_rb2d.gravityScale = 1f;
+				Vector2 targetVelocityY = new Vector2(m_rb2d.linearVelocity.x, moveY);
+				m_rb2d.linearVelocity = Vector2.SmoothDamp(m_rb2d.linearVelocity, targetVelocityY, ref m_Velocity, m_MovementSmoothing);
+			} else {
+				m_rb2d.gravityScale = 3f;
+			}
 
 			if (m_Grounded && jump) {
 				m_Grounded = false;
 				m_rb2d.AddForce(new Vector2(0f, m_JumpForce));
 			}
 
-			if (move < 0 && m_FacingRight) {
+			if (moveX < 0 && m_FacingRight) {
 				FlipThePlayer();
-			} else if (move > 0 && !m_FacingRight) {
+			} else if (moveX > 0 && !m_FacingRight) {
 				FlipThePlayer();
 			}
 		} else if (m_knockbackCounter > 0) {
 			animator.SetBool("isHurt", true);
-			if (m_knockbackedFromRight) {
-				Vector2 targetKnockbackForce = new Vector2(-k_knockbackForceX, k_knockbackForceY);
-				m_rb2d.linearVelocity = Vector3.SmoothDamp(m_rb2d.linearVelocity, targetKnockbackForce, ref m_Velocity, m_MovementSmoothing);
-			}
-			if (!m_knockbackedFromRight) {
-				Vector2 targetKnockbackForce = new Vector2(k_knockbackForceX, k_knockbackForceY);
-				m_rb2d.linearVelocity = Vector3.SmoothDamp(m_rb2d.linearVelocity, targetKnockbackForce, ref m_Velocity, m_MovementSmoothing);
+			if (m_isCollidedWithLethalArea) {
+				m_rb2d.linearVelocity = new Vector2(m_rb2d.linearVelocity.x, k_lethalAreaKnockBackForce);
+				m_isCollidedWithLethalArea = false;
+			} else if (m_isCollidedWithEnemy) {
+				if (m_knockbackedFromRight) {
+					Vector2 targetKnockbackForce = new Vector2(-k_enemyKnockbackForceX, k_enemyKnockbackForceY);
+					m_rb2d.linearVelocity = Vector2.SmoothDamp(m_rb2d.linearVelocity, targetKnockbackForce, ref m_Velocity, m_MovementSmoothing);
+				}
+				if (!m_knockbackedFromRight) {
+					Vector2 targetKnockbackForce = new Vector2(k_enemyKnockbackForceX, k_enemyKnockbackForceY);
+					m_rb2d.linearVelocity = Vector2.SmoothDamp(m_rb2d.linearVelocity, targetKnockbackForce, ref m_Velocity, m_MovementSmoothing);
+				}
+				m_isCollidedWithEnemy = false;
 			}
 			m_knockbackCounter -= Time.deltaTime;
 		}
@@ -120,4 +144,10 @@ public class CharacterController : MonoBehaviour {
 		scale.x *= -1;
 		transform.localScale = scale;
 	}
+
+    private void OnDrawGizmos()	{
+		if (m_GroundCheck != null) {
+			Gizmos.DrawWireSphere(m_GroundCheck.position, k_GroundedRadius);
+		}
+    }
 }

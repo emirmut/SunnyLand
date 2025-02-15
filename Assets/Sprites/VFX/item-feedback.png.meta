@@ -66,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -90,7 +90,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -157,10 +157,10 @@ TextureImporter:
       name: item-feedback_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 6
-        width: 20
-        height: 20
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,10 +179,10 @@ TextureImporter:
       name: item-feedback_1
       rect:
         serializedVersion: 2
-        x: 34
-        y: 2
-        width: 28
-        height: 28
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -201,10 +201,10 @@ TextureImporter:
       name: item-feedback_2
       rect:
         serializedVersion: 2
-        x: 65
+        x: 64
         y: 0
-        width: 30
-        height: 31
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,9 +224,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 7
-        width: 25
-        height: 25
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,55 +241,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: item-feedback_4
-      rect:
-        serializedVersion: 2
-        x: 106
-        y: 10
-        width: 12
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8c97d6c2b6120c810800000000000000
-      internalID: 1783462196629305800
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: item-feedback_5
-      rect:
-        serializedVersion: 2
-        x: 110
-        y: 0
-        width: 19
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0bc804214254cdfe0800000000000000
-      internalID: -1162978582541071184
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 064c63835a54cc049a66e8d0356fc970
     internalID: 0
     vertices: []
     indices: 
@@ -303,8 +259,6 @@ TextureImporter:
       item-feedback_1: 3239409046955716643
       item-feedback_2: 7070106135884023675
       item-feedback_3: -9054507609317855400
-      item-feedback_4: 1783462196629305800
-      item-feedback_5: -1162978582541071184
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

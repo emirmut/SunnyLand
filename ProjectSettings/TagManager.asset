@@ -4,12 +4,15 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Lethal Area
   - Enemy
-  - EnemyHeadCheck
   - Opposum
   - Eagle
   - Frog
+  - Door
+  - Crank
+  - Ladder
+  - Owl
+  - Platform
   layers:
   - Default
   - TransparentFX
@@ -17,7 +20,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Ground
+  - SafeArea
   - Player
   - Enemy
   - 
@@ -59,6 +62,9 @@ TagManager:
   - name: Decoration2
     uniqueID: 1970337107
     locked: 0
+  - name: Ladders
+    uniqueID: 1349992971
+    locked: 0
   - name: Safe Colliders
     uniqueID: 948068183
     locked: 0
@@ -68,8 +74,14 @@ TagManager:
   - name: Inclined
     uniqueID: 1211145201
     locked: 0
+  - name: Interactable
+    uniqueID: 3962484719
+    locked: 0
   - name: Livings
     uniqueID: 3372408539
+    locked: 0
+  - name: Collectibles
+    uniqueID: 1338722943
     locked: 0
   m_RenderingLayers:
   - Default

@@ -63,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -87,7 +87,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -154,10 +154,10 @@ TextureImporter:
       name: gem_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 15
-        height: 13
+        x: 1
+        y: 1
+        width: 13
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,10 +176,10 @@ TextureImporter:
       name: gem_1
       rect:
         serializedVersion: 2
-        x: 15
-        y: 0
-        width: 15
-        height: 13
+        x: 16
+        y: 1
+        width: 13
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,10 +198,10 @@ TextureImporter:
       name: gem_2
       rect:
         serializedVersion: 2
-        x: 30
-        y: 0
-        width: 15
-        height: 13
+        x: 31
+        y: 1
+        width: 13
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,10 +220,10 @@ TextureImporter:
       name: gem_3
       rect:
         serializedVersion: 2
-        x: 45
-        y: 0
-        width: 15
-        height: 13
+        x: 46
+        y: 1
+        width: 13
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,10 +242,10 @@ TextureImporter:
       name: gem_4
       rect:
         serializedVersion: 2
-        x: 60
-        y: 0
-        width: 15
-        height: 13
+        x: 61
+        y: 1
+        width: 13
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -264,7 +264,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5c2d6db5e5e0bf44f96c00ae5aa1107c
     internalID: 0
     vertices: []
     indices: 

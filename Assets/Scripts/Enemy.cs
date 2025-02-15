@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Drawing;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -8,10 +7,12 @@ public class Enemy : MonoBehaviour
     protected Rigidbody2D rb2d;
     protected Collider2D[] colliders;
     protected Animator animator;
+    [SerializeField] protected CharacterController controller;
     protected const float deathAnimationTime = 0.5f;
     [SerializeField] protected GameObject[] patrolPoints;
     protected Transform destinationPoint;
     [SerializeField] protected float velocity;
+    protected bool wasFlipped;
 
     [Header("Events")]
     [Space]
@@ -27,6 +28,7 @@ public class Enemy : MonoBehaviour
         } else {
             destinationPoint = patrolPoints[2].transform;
         }
+        StartCoroutine(Patrol());
     }
 
     public virtual void Die() {
@@ -34,12 +36,13 @@ public class Enemy : MonoBehaviour
     }
 
     protected virtual void FixedUpdate() {
-        Patrol();
+        
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D other) {
         var characterController = other.GetComponent<CharacterController>();
         if (characterController) {
+            controller.m_isCollidedWithEnemy = true;
             characterController.m_lives--;
             characterController.m_knockbackCounter = characterController.k_knockbackLength;
             if (other.transform.position.x < transform.position.x) {
@@ -50,74 +53,90 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    protected virtual void Patrol() {
-        if (destinationPoint == patrolPoints[0].transform) {
-            if (gameObject.CompareTag("Opposum")) {
-                rb2d.linearVelocity = new Vector2(velocity, rb2d.linearVelocity.y);
-            }
-            if (gameObject.CompareTag("Eagle")) {
-                rb2d.linearVelocity = new Vector2(rb2d.linearVelocity.x, -velocity);
-            }
-            if (gameObject.CompareTag("Frog")) {
-                animator.SetBool("isJumpAscending", false);
-                animator.SetBool("isJumpDescending", true);
-                transform.position = Vector2.MoveTowards(transform.position, patrolPoints[0].transform.position, velocity * Time.fixedDeltaTime);
-            }
-
-            if (Vector2.Distance(transform.position, destinationPoint.position) < 0.5f) {
+    protected virtual IEnumerator Patrol() {
+        while (true) {
+            if (destinationPoint == patrolPoints[0].transform) {
                 if (gameObject.CompareTag("Opposum")) {
-                    Flip();
+                    rb2d.linearVelocity = new Vector2(velocity, rb2d.linearVelocity.y);
                 }
-                if (gameObject.CompareTag("Opposum") || gameObject.CompareTag("Eagle")) {
-                    destinationPoint = patrolPoints[1].transform;
+                if (gameObject.CompareTag("Eagle") || gameObject.CompareTag("Owl")) {
+                    rb2d.linearVelocity = new Vector2(rb2d.linearVelocity.x, -velocity);
                 }
                 if (gameObject.CompareTag("Frog")) {
                     animator.SetBool("isJumpAscending", false);
-                    animator.SetBool("isJumpDescending", false);
-                    Flip();
-                    destinationPoint = patrolPoints[2].transform;
+                    animator.SetBool("isJumpDescending", true);
+                    transform.position = Vector2.MoveTowards(transform.position, patrolPoints[0].transform.position, velocity * Time.fixedDeltaTime);
                 }
-            }
-        } else if (destinationPoint == patrolPoints[1].transform) {
-            if (gameObject.CompareTag("Opposum")) {
-                rb2d.linearVelocity = new Vector2(-velocity, rb2d.linearVelocity.y);
-            }
-            if (gameObject.CompareTag("Eagle")) {
-                rb2d.linearVelocity = new Vector2(rb2d.linearVelocity.x, velocity);
-            }
-            if (gameObject.CompareTag("Frog")) {
-                animator.SetBool("isJumpAscending", false);
-                animator.SetBool("isJumpDescending", true);
-                transform.position = Vector2.MoveTowards(transform.position, patrolPoints[1].transform.position, velocity * Time.fixedDeltaTime);
-            }
 
-            if (Vector2.Distance(transform.position, destinationPoint.position) < 0.5f) {
-                if (gameObject.CompareTag("Opposum")) {
-                    Flip();
-                }
-                if (gameObject.CompareTag("Opposum") || gameObject.CompareTag("Eagle")) {
-                    destinationPoint = patrolPoints[0].transform;
-                }
-                if (gameObject.CompareTag("Frog")) {
-                    animator.SetBool("isJumpAscending", false);
-                    animator.SetBool("isJumpDescending", false);
-                    Flip();
-                    destinationPoint = patrolPoints[2].transform;
-                }
-            }
-        } else if (destinationPoint == patrolPoints[2].transform) {
-            if (gameObject.CompareTag("Frog")) {
-                animator.SetBool("isJumpAscending", true);
-                animator.SetBool("isJumpDescending", false);
-                transform.position = Vector2.MoveTowards(transform.position, patrolPoints[2].transform.position, velocity * Time.fixedDeltaTime);
                 if (Vector2.Distance(transform.position, destinationPoint.position) < 0.5f) {
-                    if (transform.localScale.x > 0) {
+                    if (gameObject.CompareTag("Opposum")) {
+                        Flip();
+                    }
+                    if (gameObject.CompareTag("Opposum") || gameObject.CompareTag("Eagle") || gameObject.CompareTag("Owl")) {
                         destinationPoint = patrolPoints[1].transform;
-                    } else {
+                    }
+                    if (gameObject.CompareTag("Frog")) {
+                        animator.SetBool("isJumpAscending", false);
+                        animator.SetBool("isJumpDescending", false);
+                        if (!wasFlipped) {
+                            wasFlipped = true;
+                            Flip();
+                        }
+                        yield return new WaitForSeconds(2f);
+                        Debug.Log("Waited for 2 seconds.");
+                        wasFlipped = false;
+                        destinationPoint = patrolPoints[2].transform;
+                    }
+                }
+            } else if (destinationPoint == patrolPoints[1].transform) {
+                if (gameObject.CompareTag("Opposum")) {
+                    rb2d.linearVelocity = new Vector2(-velocity, rb2d.linearVelocity.y);
+                }
+                if (gameObject.CompareTag("Eagle") || gameObject.CompareTag("Owl")) {
+                    rb2d.linearVelocity = new Vector2(rb2d.linearVelocity.x, velocity);
+                }
+                if (gameObject.CompareTag("Frog")) {
+                    animator.SetBool("isJumpAscending", false);
+                    animator.SetBool("isJumpDescending", true);
+                    transform.position = Vector2.MoveTowards(transform.position, patrolPoints[1].transform.position, velocity * Time.fixedDeltaTime);
+                }
+    
+                if (Vector2.Distance(transform.position, destinationPoint.position) < 0.5f) {
+                    if (gameObject.CompareTag("Opposum")) {
+                        Flip();
+                    }
+                    if (gameObject.CompareTag("Opposum") || gameObject.CompareTag("Eagle") || gameObject.CompareTag("Owl")) {
                         destinationPoint = patrolPoints[0].transform;
+                    }
+                    if (gameObject.CompareTag("Frog")) {
+                        animator.SetBool("isJumpAscending", false);
+                        animator.SetBool("isJumpDescending", false);
+                        if (!wasFlipped) {
+                            wasFlipped = true;
+                            Flip();
+                        }
+                        yield return new WaitForSeconds(2f);
+                        Debug.Log("Waited for 2 seconds.");
+                        wasFlipped = false;
+                        destinationPoint = patrolPoints[2].transform;
+                    }
+                }
+            } else if (destinationPoint == patrolPoints[2].transform) {
+                if (gameObject.CompareTag("Frog")) {
+                    animator.SetBool("isJumpAscending", true);
+                    animator.SetBool("isJumpDescending", false);
+                    transform.position = Vector2.MoveTowards(transform.position, patrolPoints[2].transform.position, velocity * Time.fixedDeltaTime);
+                    if (Vector2.Distance(transform.position, destinationPoint.position) < 0.5f) {
+                        if (transform.localScale.x > 0) {
+                            destinationPoint = patrolPoints[1].transform;
+                        } else {
+                            destinationPoint = patrolPoints[0].transform;
+                        }
                     }
                 }
             }
+            yield return null;
+            Debug.Log("Waited for 0 seconds.");
         }
     }
 

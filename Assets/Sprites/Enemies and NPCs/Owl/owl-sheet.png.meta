@@ -72,7 +72,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -96,7 +96,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -163,10 +163,10 @@ TextureImporter:
       name: owl-sheet_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 8
-        width: 43
-        height: 45
+        x: 13
+        y: 9
+        width: 41
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,10 +185,10 @@ TextureImporter:
       name: owl-sheet_1
       rect:
         serializedVersion: 2
-        x: 76
-        y: 7
-        width: 40
-        height: 46
+        x: 77
+        y: 8
+        width: 38
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,10 +207,10 @@ TextureImporter:
       name: owl-sheet_2
       rect:
         serializedVersion: 2
-        x: 140
-        y: 8
-        width: 39
-        height: 41
+        x: 141
+        y: 9
+        width: 37
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,10 +229,10 @@ TextureImporter:
       name: owl-sheet_3
       rect:
         serializedVersion: 2
-        x: 202
-        y: 9
-        width: 45
-        height: 38
+        x: 203
+        y: 10
+        width: 43
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -251,10 +251,10 @@ TextureImporter:
       name: owl-sheet_4
       rect:
         serializedVersion: 2
-        x: 268
-        y: 3
-        width: 35
-        height: 45
+        x: 269
+        y: 4
+        width: 33
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,10 +273,10 @@ TextureImporter:
       name: owl-sheet_5
       rect:
         serializedVersion: 2
-        x: 332
-        y: 3
-        width: 33
-        height: 46
+        x: 333
+        y: 4
+        width: 31
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -295,10 +295,10 @@ TextureImporter:
       name: owl-sheet_6
       rect:
         serializedVersion: 2
-        x: 395
-        y: 9
-        width: 39
-        height: 40
+        x: 396
+        y: 10
+        width: 37
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -317,10 +317,10 @@ TextureImporter:
       name: owl-sheet_7
       rect:
         serializedVersion: 2
-        x: 447
-        y: 10
-        width: 64
-        height: 38
+        x: 448
+        y: 11
+        width: 62
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -339,7 +339,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 67845ee41c507074a8de3377787b8414
     internalID: 0
     vertices: []
     indices: 

@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Events;
 
 public class EnemyHeadChecker : MonoBehaviour
 {
@@ -18,8 +17,8 @@ public class EnemyHeadChecker : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        Enemy enemy = other.GetComponent<Enemy>();
-        if (enemy != null) {
+        if (other.GetComponent<Enemy>()) {
+            Enemy enemy = other.GetComponent<Enemy>(); 
             player.AddForce(new Vector2(0f, 600f));
             enemy.Die();
         }

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: cherry
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: -90375647409325229, guid: 925ec2eb72c5d6744841f75c5a58d81a, type: 3}
+  - {fileID: -8401610525154545504, guid: 925ec2eb72c5d6744841f75c5a58d81a, type: 3}
+  - {fileID: -845279248070206384, guid: 925ec2eb72c5d6744841f75c5a58d81a, type: 3}
+  - {fileID: -7956424436455985191, guid: 925ec2eb72c5d6744841f75c5a58d81a, type: 3}
+  - {fileID: -1379442073510257210, guid: 925ec2eb72c5d6744841f75c5a58d81a, type: 3}
+  - {fileID: -7956424436455985191, guid: 925ec2eb72c5d6744841f75c5a58d81a, type: 3}
+  - {fileID: -845279248070206384, guid: 925ec2eb72c5d6744841f75c5a58d81a, type: 3}
+  - {fileID: -8401610525154545504, guid: 925ec2eb72c5d6744841f75c5a58d81a, type: 3}
+  - {fileID: -90375647409325229, guid: 925ec2eb72c5d6744841f75c5a58d81a, type: 3}
+  m_MinSpeed: 15
+  m_MaxSpeed: 15
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
+  m_TileAnimationFlags: 0
