@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3423839422461496898}
   - component: {fileID: 108366024684099806}
   - component: {fileID: 8640690820442329060}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Opposum
   m_TagString: Opposum
   m_Icon: {fileID: 0}
@@ -33,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 7648671185737290165}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.465, y: 0.464, z: 0.06546977}
+  m_LocalPosition: {x: -2.465, y: 0.464, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -291,7 +291,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: a26beec0614e1c2468d1645cbe7707c5, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -330,7 +330,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fec0114af18b6048b68bf98db88eaf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
   patrolPoints:
   - {fileID: 0}
   - {fileID: 0}
@@ -339,8 +338,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8640690820442329060}
-        m_TargetAssemblyTypeName: Opposum, Assembly-CSharp
-        m_MethodName: OnOpposumDie
+        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
+        m_MethodName: OnDie
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

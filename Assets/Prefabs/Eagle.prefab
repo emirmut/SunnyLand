@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8072789575440799307}
   - component: {fileID: 2164044821329473109}
   - component: {fileID: 1665495311916812751}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Eagle
   m_TagString: Eagle
   m_Icon: {fileID: 0}
@@ -302,7 +302,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: a26beec0614e1c2468d1645cbe7707c5, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -341,7 +341,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4a40b5698f624241909f4847d042f5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
   patrolPoints:
   - {fileID: 0}
   - {fileID: 0}
@@ -350,8 +349,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1665495311916812751}
-        m_TargetAssemblyTypeName: Eagle, Assembly-CSharp
-        m_MethodName: OnEagleDie
+        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
+        m_MethodName: OnDie
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

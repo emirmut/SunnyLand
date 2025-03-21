@@ -17,9 +17,9 @@ GameObject:
   - component: {fileID: 5852877565372934220}
   - component: {fileID: 8982092975157976805}
   - component: {fileID: 6791427363412444919}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Frog
-  m_TagString: Frog
+  m_TagString: Babag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -282,7 +282,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: a26beec0614e1c2468d1645cbe7707c5, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -321,18 +321,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c715f9f6a13feb24c8775b6c279e5386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
   patrolPoints:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   velocity: 9
+  audioManager: {fileID: 0}
   OnDeathEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6791427363412444919}
-        m_TargetAssemblyTypeName: Frog, Assembly-CSharp
-        m_MethodName: OnFrogDie
+        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
+        m_MethodName: OnDie
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -346,4 +346,7 @@ MonoBehaviour:
   boxCollider1: {fileID: 101069321353258782}
   capsuleCollider0: {fileID: 5852877565372934220}
   capsuleCollider1: {fileID: 8982092975157976805}
+  frogIdle: {fileID: -8510697443743385242, guid: 0be7bbd7cb652564e8a832900605dfde, type: 3}
+  frogAscending: {fileID: -7645190019268416926, guid: 0be7bbd7cb652564e8a832900605dfde, type: 3}
+  frogDescending: {fileID: -766726975, guid: 0be7bbd7cb652564e8a832900605dfde, type: 3}
   frogAnimator: {fileID: 4326566425828990463}

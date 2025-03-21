@@ -7,12 +7,12 @@ TagManager:
   - Enemy
   - Opposum
   - Eagle
-  - Frog
   - Door
   - Crank
   - Ladder
   - Owl
-  - Platform
+  - Ghost
+  - Frog
   layers:
   - Default
   - TransparentFX
@@ -22,7 +22,7 @@ TagManager:
   - UI
   - SafeArea
   - Player
-  - Enemy
+  - 
   - 
   - 
   - 
@@ -68,7 +68,7 @@ TagManager:
   - name: Safe Colliders
     uniqueID: 948068183
     locked: 0
-  - name: Lethal Colliders
+  - name: Spikes
     uniqueID: 627538891
     locked: 0
   - name: Inclined

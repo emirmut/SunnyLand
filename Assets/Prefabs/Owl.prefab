@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7766832338061188845}
   - component: {fileID: 2092521978377783116}
   - component: {fileID: 3758569006004432582}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Owl
   m_TagString: Owl
   m_Icon: {fileID: 0}
@@ -32,7 +32,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7793449696115497105}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -20.65, y: 5.459, z: 0}
   m_LocalScale: {x: 0.574121, y: 0.574121, z: 0.574121}
   m_ConstrainProportionsScale: 0
@@ -264,7 +264,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: a26beec0614e1c2468d1645cbe7707c5, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -303,7 +303,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5580d4c2c76b38b45b02adf6eae589cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
   patrolPoints:
   - {fileID: 0}
   - {fileID: 0}
@@ -312,8 +311,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3758569006004432582}
-        m_TargetAssemblyTypeName: Owl, Assembly-CSharp
-        m_MethodName: OnOwlDie
+        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
+        m_MethodName: OnDie
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
