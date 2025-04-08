@@ -1,0 +1,923 @@
+fileFormatVersion: 2
+guid: 51e1a4b6d95bfa54e9b21ab7e2386e37
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1563288809202932743
+    second: Lightning Trap - Level 3_0
+  - first:
+      213: 4033328721501983115
+    second: Lightning Trap - Level 3_1
+  - first:
+      213: 1736376592958943197
+    second: Lightning Trap - Level 3_2
+  - first:
+      213: 2990044193353104516
+    second: Lightning Trap - Level 3_3
+  - first:
+      213: -3838793987641220381
+    second: Lightning Trap - Level 3_4
+  - first:
+      213: -4615739360998486654
+    second: Lightning Trap - Level 3_5
+  - first:
+      213: -3017651743726996440
+    second: Lightning Trap - Level 3_6
+  - first:
+      213: 5571583544110616446
+    second: Lightning Trap - Level 3_7
+  - first:
+      213: 4391946615765035142
+    second: Lightning Trap - Level 3_8
+  - first:
+      213: -5948118120451695958
+    second: Lightning Trap - Level 3_9
+  - first:
+      213: -6666976471782173570
+    second: Lightning Trap - Level 3_10
+  - first:
+      213: 297134496947650489
+    second: Lightning Trap - Level 3_11
+  - first:
+      213: 2473234606633676681
+    second: Lightning Trap - Level 3_12
+  - first:
+      213: 6610510879860473836
+    second: Lightning Trap - Level 3_13
+  - first:
+      213: -4160914609811511458
+    second: Lightning Trap - Level 3_14
+  - first:
+      213: 4759449670298847736
+    second: Lightning Trap - Level 3_15
+  - first:
+      213: 8327132157781136460
+    second: Lightning Trap - Level 3_16
+  - first:
+      213: -8954591125844099831
+    second: Lightning Trap - Level 3_17
+  - first:
+      213: -4388166988454375527
+    second: Lightning Trap - Level 3_18
+  - first:
+      213: 7777319170994250661
+    second: Lightning Trap - Level 3_19
+  - first:
+      213: 5698105318765070466
+    second: Lightning Trap - Level 3_20
+  - first:
+      213: -242825332383425587
+    second: Lightning Trap - Level 3_21
+  - first:
+      213: -6974527217344040202
+    second: Lightning Trap - Level 3_22
+  - first:
+      213: -334706454877021448
+    second: Lightning Trap - Level 3_23
+  - first:
+      213: -63644228433137005
+    second: Lightning Trap - Level 3_24
+  - first:
+      213: -2204269809553113853
+    second: Lightning Trap - Level 3_25
+  - first:
+      213: -895496539028370555
+    second: Lightning Trap - Level 3_26
+  - first:
+      213: 7648444074156940604
+    second: Lightning Trap - Level 3_27
+  - first:
+      213: 668721150479666799
+    second: Lightning Trap - Level 3_28
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Lvl 3 Lightning Trap_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 84
+        width: 47
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b41f2c751356a14fbf1cd3843a77c7c
+      internalID: 632359003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 3 Lightning Trap_1
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 84
+        width: 48
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c5eb715e08d31a479774772052faf82
+      internalID: 2045078496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 3 Lightning Trap_2
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 84
+        width: 48
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 131bb873f74fa9b4688ae4822a3f2b1e
+      internalID: -1818298418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 3 Lightning Trap_3
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 0
+        width: 57
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3fa7c29c07685046a9a52f83ef8603c
+      internalID: 1331821298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 3 Lightning Trap_4
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 0
+        width: 58
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05f50a0ecc870d841a143a51df7c59f8
+      internalID: 1910997076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 3 Lightning Trap_5
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 0
+        width: 58
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f032020dea1b27245bc22995553bee13
+      internalID: 1327247449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 3 Lightning Trap_6
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 0
+        width: 58
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3052956ab6b513e4aad48ccf3818d5c3
+      internalID: -2137267715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 3 Lightning Trap_7
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 0
+        width: 58
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69df525644dc8f94aa627d5569399313
+      internalID: 1709070030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 3 Lightning Trap_8
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 0
+        width: 58
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d0b32dc91c744445b4842852ed38d1d
+      internalID: 1382863889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 3 Lightning Trap_9
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 0
+        width: 58
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d18ae7891e25d39409bf908290455583
+      internalID: 1905809537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 3 Lightning Trap_10
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 0
+        width: 57
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d9dc7e61bd920249bd7e8005b42392b
+      internalID: 1937328460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 3 Lightning Trap_11
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 0
+        width: 56
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86e3a925b8ae7df4bab8f721495b17fb
+      internalID: -477610552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 3 Lightning Trap_12
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 0
+        width: 56
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00baaab1a00004f49a90bb360808c82f
+      internalID: -844299985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 3 Lightning Trap_13
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 0
+        width: 56
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f4ccc8eeb874a14cb3de9d7085edf30
+      internalID: -887475065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 3 Lightning Trap_14
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 0
+        width: 57
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6424553a5b42c5949803ad2f27cbfdf9
+      internalID: -1655692788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 3 Lightning Trap_15
+      rect:
+        serializedVersion: 2
+        x: 1463
+        y: 0
+        width: 58
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 357088875a1a6f843b70d61ca5f5d02c
+      internalID: 415470431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 3 Lightning Trap_16
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 0
+        width: 58
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8f8f91df5abd714f99677d0592f3bb5
+      internalID: 1912088258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 3 Lightning Trap_17
+      rect:
+        serializedVersion: 2
+        x: 1655
+        y: 0
+        width: 58
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f018daa5f081abb4fb55e5efb72de244
+      internalID: 433950716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 3 Lightning Trap_18
+      rect:
+        serializedVersion: 2
+        x: 1751
+        y: 69
+        width: 49
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a4f98d8796b9294ea04127b7aaf3d2d
+      internalID: -453830210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 3 Lightning Trap_19
+      rect:
+        serializedVersion: 2
+        x: 1847
+        y: 83
+        width: 48
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5269a3bc79f75e448d3affcead9f846
+      internalID: -1299619563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 3 Lightning Trap_20
+      rect:
+        serializedVersion: 2
+        x: 1943
+        y: 84
+        width: 48
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02f2e474ac8d36f49820f26ab8a57321
+      internalID: 153476324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 3 Lightning Trap_21
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 84
+        width: 47
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09ef17de2f7fa664dac3f900b5b085ea
+      internalID: 786416752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 3 Lightning Trap_22
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 56
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4129a1301ea1e534f8ccc70656b65686
+      internalID: 1074643123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 3 Lightning Trap_23
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 56
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1db71a25d2ece649907137254c7392d
+      internalID: 802392223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 3 Lightning Trap_24
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 0
+        width: 56
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18d2be7a458210e418cc2d9c6474bd36
+      internalID: -1778264846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 3 Lightning Trap_25
+      rect:
+        serializedVersion: 2
+        x: 1751
+        y: 0
+        width: 58
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afb756bf98deb934eb6dcb2069e5b1a1
+      internalID: 1231039963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 3 Lightning Trap_26
+      rect:
+        serializedVersion: 2
+        x: 1847
+        y: 0
+        width: 58
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d037014743d65744fb2fe6cae8f3dbc1
+      internalID: -88577280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 3 Lightning Trap_27
+      rect:
+        serializedVersion: 2
+        x: 1943
+        y: 0
+        width: 58
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e75f7e6888e92cc4a8da8b4a395c3317
+      internalID: -2042375553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl 3 Lightning Trap_28
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 0
+        width: 57
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4f6abcb91b4b0c40bb31a996d560ece
+      internalID: 158951211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0c27e42f8f6d41b4684482e503ba4350
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Lvl 3 Lightning Trap_0: 632359003
+      Lvl 3 Lightning Trap_1: 2045078496
+      Lvl 3 Lightning Trap_10: 1937328460
+      Lvl 3 Lightning Trap_11: -477610552
+      Lvl 3 Lightning Trap_12: -844299985
+      Lvl 3 Lightning Trap_13: -887475065
+      Lvl 3 Lightning Trap_14: -1655692788
+      Lvl 3 Lightning Trap_15: 415470431
+      Lvl 3 Lightning Trap_16: 1912088258
+      Lvl 3 Lightning Trap_17: 433950716
+      Lvl 3 Lightning Trap_18: -453830210
+      Lvl 3 Lightning Trap_19: -1299619563
+      Lvl 3 Lightning Trap_2: -1818298418
+      Lvl 3 Lightning Trap_20: 153476324
+      Lvl 3 Lightning Trap_21: 786416752
+      Lvl 3 Lightning Trap_22: 1074643123
+      Lvl 3 Lightning Trap_23: 802392223
+      Lvl 3 Lightning Trap_24: -1778264846
+      Lvl 3 Lightning Trap_25: 1231039963
+      Lvl 3 Lightning Trap_26: -88577280
+      Lvl 3 Lightning Trap_27: -2042375553
+      Lvl 3 Lightning Trap_28: 158951211
+      Lvl 3 Lightning Trap_3: 1331821298
+      Lvl 3 Lightning Trap_4: 1910997076
+      Lvl 3 Lightning Trap_5: 1327247449
+      Lvl 3 Lightning Trap_6: -2137267715
+      Lvl 3 Lightning Trap_7: 1709070030
+      Lvl 3 Lightning Trap_8: 1382863889
+      Lvl 3 Lightning Trap_9: 1905809537
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

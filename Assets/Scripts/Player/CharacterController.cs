@@ -1,14 +1,17 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class CharacterController : MonoBehaviour {
+	private Vector2 previousVelocity;
+	private Vector2 currentAcceleration;
 	[SerializeField] private float m_JumpForce = 230f;							// Amount of force added when the player jumps.
 	[Range(0, 1)] [SerializeField] private float m_CrouchSpeed = 0.4f;			// Amount of maxSpeed applied to crouching movement. 1 = 100%
 	private bool m_wasCrouching = false;										// Whether or not a player was crouching in the last frame
 	[Range(0, 0.3f)] [SerializeField] private float m_MovementSmoothing = 0.05f;// How much to smooth out the movement
 	private bool m_FacingRight = true;   										// For determining which way the player is currently facing.
-	[SerializeField] private bool m_AirControl = true;							// Whether or not a player can steer while jumping;
+	[SerializeField] private bool m_AirControl = true;							// Whether or not a player can control the character while the character is on the air;
 
 	[SerializeField] private LayerMask m_WhatIsSafeArea;						// A mask determining what is safe area to the character
 	[SerializeField] private Transform m_GroundCheck;							// A position marking where to check if the player is grounded.
@@ -26,6 +29,7 @@ public class CharacterController : MonoBehaviour {
 	[HideInInspector] public bool m_knockbackedFromUp; 							// Whether or not the player is knockbacked from up
 	[HideInInspector] public bool m_isCollidedWithEnemy;						// Whether or not the player is collided with an enemy
 	[HideInInspector] public bool m_isCollidedWithLethalArea;					// Whether or not the player is collided with a spike
+	[HideInInspector] public bool m_isCollidedWithLightningTrap;				// Whether or not the player is collided with a lightning trap
 	
 	private Vector2 m_Velocity = Vector2.zero;									// Current velocity of the player
 	[SerializeField] private GameObject heart;									// A game object demonstrating the heart icon on the UI
@@ -68,6 +72,16 @@ public class CharacterController : MonoBehaviour {
 					OnLandEvent.Invoke();
 				}
 			}
+		}
+
+		// We figured out if the character is falling down by checking the current acceleration of the character on y-axis
+		currentAcceleration = (m_rb2d.linearVelocity - previousVelocity) / Time.fixedDeltaTime;
+    	previousVelocity = m_rb2d.linearVelocity;
+		if (currentAcceleration.y < -9.8f * 3f) { // Note that gravityScale is equal to 3f when not climbing, so the comparison value should be adjusted accordingly
+    		// Character's acceleration is faster than gravity meaning that it is falling down
+    		animator.SetBool("isJumpingDown", true);
+		} else {
+		    animator.SetBool("isJumpingDown", false);
 		}
 	}
 
@@ -113,9 +127,6 @@ public class CharacterController : MonoBehaviour {
 				if (!audioManager.SFXSource.isPlaying) { // to play the jump audio only once when the player jumps
 					audioManager.PlaySFXOneShot(audioManager.jump);
 				}
-			}
-			if (!m_Grounded) {
-				animator.SetBool("isJumping", true);
 			}
 
 			if (moveX < 0 && m_FacingRight) {
@@ -165,6 +176,12 @@ public class CharacterController : MonoBehaviour {
             heart.GetComponent<Image>().sprite = health[3];
         }
 	}
+	
+	public IEnumerator ChangeJumpAnimation() {
+        yield return new WaitForSeconds(0.5f);
+        animator.SetBool("isJumpingUp", false);
+        animator.SetBool("isJumpingDown", true);
+    }
 
     private void OnDrawGizmos()	{
 		if (m_GroundCheck != null) {

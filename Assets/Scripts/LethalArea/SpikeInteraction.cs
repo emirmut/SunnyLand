@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class LethalArea : MonoBehaviour
+public class SpikeInteraction : MonoBehaviour
 {
     [SerializeField] private CharacterController controller;
     [SerializeField] private AudioManager audioManager;

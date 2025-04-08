@@ -4,8 +4,12 @@ using UnityEngine;
 public class PlayerData
 {
     public int level;
+    public int totalCollectedStars;
+    public int[] collectedStarsOnCurrentLevel;
 
     public PlayerData(SaveAndLoadManager saveAndLoadManager) {
         level = saveAndLoadManager.level;
+        totalCollectedStars = saveAndLoadManager.totalCollectedStars;
+        collectedStarsOnCurrentLevel = saveAndLoadManager.collectedStarsOnCurrentLevel;
     }
 }

@@ -6,14 +6,18 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Collider2D))] // every interactable object needs a Collider2D
 public class Interactable : MonoBehaviour
 {
+    [SerializeField] private CharacterController controller;
     [SerializeField] private AudioManager audioManager;
     [SerializeField] private SaveAndLoadManager saveAndLoadManager;
+    [SerializeField] private Timer timer;
     protected SpriteRenderer spriteRenderer;
     [SerializeField] protected Sprite interactableV1;
     [SerializeField] protected Sprite interactableV2;
     [SerializeField] protected Door door;
     [SerializeField] protected Animator animator;
     protected bool playerDetected;
+    protected int bestStars = 0;
+
     [SerializeField] protected GameObject interactionPanel;
     [SerializeField] protected Text interactionText;
     [SerializeField] protected string[] lines; // replikler
@@ -57,9 +61,35 @@ public class Interactable : MonoBehaviour
         if (playerDetected && Input.GetButtonDown("Interact")) {
             if (gameObject.CompareTag("Door") && spriteRenderer.sprite == interactableV2) {
                 OnSceneSwitchEvent.Invoke();
+                if (controller.m_lives >= 3 && timer.currentTimeInSeconds >= 200) {
+                    saveAndLoadManager.collectedStarsOnCurrentLevel[saveAndLoadManager.level] = 3;
+                    if (saveAndLoadManager.collectedStarsOnCurrentLevel[saveAndLoadManager.level] > bestStars) { // if the player gets 3 stars from a level, they shouldn't get any more stars from that level when they play that level again
+                        if (bestStars == 0) {  // this block gets executed if the player completed the level for the first time
+                            saveAndLoadManager.totalCollectedStars += 3;
+                        } else if (bestStars == 1) { // this block gets executed if the player gets 3 stars from a level which they got 1 star before
+                            saveAndLoadManager.totalCollectedStars += 2;
+                        } else if (bestStars == 2) { // this block gets executed if the player gets 3 stars from a level which they got 2 star before
+                            saveAndLoadManager.totalCollectedStars++;
+                        }
+                    }
+                } else if (controller.m_lives >= 2 && timer.currentTimeInSeconds >= 100) {
+                    saveAndLoadManager.collectedStarsOnCurrentLevel[saveAndLoadManager.level] = 2;
+                    if (saveAndLoadManager.collectedStarsOnCurrentLevel[saveAndLoadManager.level] > bestStars) { // player shouldn't get stars if they don't get stars more than their best performance
+                        if (bestStars == 0) { // player gets 2 stars if they completed that level for the first time
+                            saveAndLoadManager.totalCollectedStars += 2;
+                        } else if (bestStars == 1) { // this block gets executed if the player gets 2 stars from a level which they got 1 star before
+                            saveAndLoadManager.totalCollectedStars++;
+                        }
+                    }
+                } else {
+                    saveAndLoadManager.collectedStarsOnCurrentLevel[saveAndLoadManager.level] = 1;
+                    if (saveAndLoadManager.collectedStarsOnCurrentLevel[saveAndLoadManager.level] > bestStars) {
+                        saveAndLoadManager.totalCollectedStars += 1;
+                    }
+                }
+                bestStars = saveAndLoadManager.collectedStarsOnCurrentLevel[saveAndLoadManager.level];
                 saveAndLoadManager.level++;
                 saveAndLoadManager.SavePlayer();
-                Debug.Log("Next Level");
             }
             if (gameObject.CompareTag("Crank")) {
                 if (spriteRenderer.sprite == interactableV1) {

@@ -694,12 +694,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d533efb7f65771468185c55ce4e47bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSource: {fileID: 3766135116032392182}
+  levelMusicSource: {fileID: 3766135116032392182}
   SFXSource: {fileID: 5544218066136303887}
   runningSource: {fileID: 3049112914513331643}
   crouchingSource: {fileID: 7654772195787931438}
   climbingSource: {fileID: 5302287323240535415}
-  level1BackgroundMusic: {fileID: 8300000, guid: 6d5af566a95dfb7459a0bcb4469dd081, type: 3}
+  levelBackgroundMusics:
+  - {fileID: 8300000, guid: 6d5af566a95dfb7459a0bcb4469dd081, type: 3}
+  - {fileID: 0}
   buttonClicked: {fileID: 8300000, guid: 09abe466a9ef625448d772434e781209, type: 3}
   buttonHovered: {fileID: 8300000, guid: 016738cce48c9264291bbeb7cdfa64ca, type: 3}
   collect: {fileID: 8300000, guid: 6a4a184e4126f05479f0767b7c51e733, type: 3}

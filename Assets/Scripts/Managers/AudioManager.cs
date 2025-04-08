@@ -4,7 +4,7 @@ public class AudioManager : MonoBehaviour
 {
     [Header("Audio Sources")]
     [Space]
-    public AudioSource musicSource;
+    public AudioSource levelMusicSource;
     public AudioSource SFXSource;
     public AudioSource runningSource;
     public AudioSource crouchingSource;
@@ -13,8 +13,7 @@ public class AudioManager : MonoBehaviour
     
     [Header("Audio Clips")]
     [Space]
-    public AudioClip level1BackgroundMusic; //
-    public AudioClip level2BackgroundMusic; 
+    public AudioClip[] levelBackgroundMusics;
     public AudioClip buttonClicked; //
     public AudioClip buttonHovered; //
     public AudioClip collect; //
@@ -32,19 +31,20 @@ public class AudioManager : MonoBehaviour
     public AudioClip optionsElementClicked; //
     public AudioClip spikeInteraction; //
     public AudioClip toggleButtonOn; //
+    public AudioClip lightningTrapInteraction; 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
         if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "StartMenu" && UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "Levels") {
             MenuBackgroundMusicManager.instance.GetComponent<AudioSource>().Stop();
             if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Level1") {
-                musicSource.clip = level1BackgroundMusic;
+                levelMusicSource.clip = levelBackgroundMusics[0];
             } else if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Level2") {
-                musicSource.clip = level2BackgroundMusic;
+                levelMusicSource.clip = levelBackgroundMusics[1];
             }
-            musicSource.Play();
+            levelMusicSource.Play();
         } else {
-            musicSource.Stop();
+            levelMusicSource.Stop();
             if (!MenuBackgroundMusicManager.instance.GetComponent<AudioSource>().isPlaying) {
                 MenuBackgroundMusicManager.instance.GetComponent<AudioSource>().Play();
             }

@@ -5,10 +5,8 @@ using UnityEngine.Events;
 public class Enemy : MonoBehaviour
 {
     protected Rigidbody2D rb2d;
-    protected Collider2D[] colliders;
-    protected SpriteRenderer sr;
-    protected Sprite[] sprites;
-    protected Animator animator;
+    [SerializeField] protected Animator animator;
+    [SerializeField] protected Collider2D[] colliders;
     protected const float deathAnimationTime = 0.5f;
     [SerializeField] protected GameObject[] patrolPoints;
     protected Transform destinationPoint;
@@ -25,7 +23,6 @@ public class Enemy : MonoBehaviour
             OnDeathEvent = new UnityEvent();
         }
         rb2d = GetComponent<Rigidbody2D>();
-        sr = GetComponent<SpriteRenderer>();
         if (!gameObject.CompareTag("Ghost")) {
             if (!gameObject.CompareTag("Frog")) {
                 destinationPoint = patrolPoints[1].transform;
@@ -53,7 +50,6 @@ public class Enemy : MonoBehaviour
     }
 
     protected virtual IEnumerator Patrol() {
-        Debug.Log("Patrol method called");
         while (true) {
             if (destinationPoint == patrolPoints[0].transform) {
                 if (gameObject.CompareTag("Opposum")) {
@@ -63,10 +59,7 @@ public class Enemy : MonoBehaviour
                     rb2d.linearVelocity = new Vector2(rb2d.linearVelocity.x, -velocity);
                 }
                 if (gameObject.CompareTag("Frog")) {
-                    animator.SetBool("isIdle", false);
-                    sr.sprite = sprites[2];
                     rb2d.linearVelocity = new Vector2(velocity, -velocity);
-                    Debug.Log("Frog has + " + rb2d.linearVelocity + " velocity.");
                 }
 
                 if (Vector2.Distance(transform.position, destinationPoint.position) < 0.5f) {
@@ -77,15 +70,16 @@ public class Enemy : MonoBehaviour
                         destinationPoint = patrolPoints[1].transform;
                     }
                     if (gameObject.CompareTag("Frog")) {
-                        sr.sprite = sprites[0];
+                        animator.SetBool("isJumpingDown", false);
                         animator.SetBool("isIdle", true);
                         if (!wasFlipped) {
                             wasFlipped = true;
                             StartCoroutine(Flip());
                         }
+                        rb2d.linearVelocity = Vector2.zero; // make the frog stop when it reaches the destination point
                         yield return new WaitForSeconds(2f);
+                        destinationPoint = patrolPoints[2].transform; // set the destination point after waiting for 2 seconds
                         wasFlipped = false;
-                        destinationPoint = patrolPoints[2].transform;
                     }
                 }
             } else if (destinationPoint == patrolPoints[1].transform) {
@@ -96,10 +90,7 @@ public class Enemy : MonoBehaviour
                     rb2d.linearVelocity = new Vector2(rb2d.linearVelocity.x, velocity);
                 }
                 if (gameObject.CompareTag("Frog")) {
-                    animator.SetBool("isIdle", false);
-                    sr.sprite = sprites[2];
                     rb2d.linearVelocity = new Vector2(-velocity, -velocity);
-                    Debug.Log("Frog has + " + rb2d.linearVelocity + " velocity.");
                 }
     
                 if (Vector2.Distance(transform.position, destinationPoint.position) < 0.5f) {
@@ -110,35 +101,34 @@ public class Enemy : MonoBehaviour
                         destinationPoint = patrolPoints[0].transform;
                     }
                     if (gameObject.CompareTag("Frog")) {
-                        sr.sprite = sprites[0];
+                        animator.SetBool("isJumpingDown", false);
                         animator.SetBool("isIdle", true);
                         if (!wasFlipped) {
                             wasFlipped = true;
                             StartCoroutine(Flip());
                         }
+                        rb2d.linearVelocity = Vector2.zero; // make the frog stop when it reaches the destination point
                         yield return new WaitForSeconds(2f);
+                        destinationPoint = patrolPoints[2].transform; // set the destination point after waiting for 2 seconds
                         wasFlipped = false;
-                        destinationPoint = patrolPoints[2].transform;
                     }
                 }
             } else if (destinationPoint == patrolPoints[2].transform) {
-                if (gameObject.CompareTag("Frog")) {
-                    animator.SetBool("isIdle", false);
-                    sr.sprite = sprites[1];
+                animator.SetBool("isJumpingDown", false);
+                animator.SetBool("isIdle", false);
+                animator.SetBool("isJumpingUp", true);
+                if (transform.localScale.x > 0) {
+                    rb2d.linearVelocity = new Vector2(-velocity, velocity);
+                } else {
+                    rb2d.linearVelocity = new Vector2(velocity, velocity);
+                }
+                if (Vector2.Distance(transform.position, destinationPoint.position) < 0.5f) {
+                    animator.SetBool("isJumpingUp", false);
+                    animator.SetBool("isJumpingDown", true);
                     if (transform.localScale.x > 0) {
-                        rb2d.linearVelocity = new Vector2(-velocity, velocity);
-                        Debug.Log("Frog has + " + rb2d.linearVelocity + " velocity.");
+                        destinationPoint = patrolPoints[1].transform;
                     } else {
-                        rb2d.linearVelocity = new Vector2(velocity, velocity);
-                        Debug.Log("Frog has + " + rb2d.linearVelocity + " velocity.");
-                    }
-                    if (Vector2.Distance(transform.position, destinationPoint.position) < 0.5f) {
-                        sr.sprite = sprites[2];
-                        if (transform.localScale.x > 0) {
-                            destinationPoint = patrolPoints[1].transform;
-                        } else {
-                            destinationPoint = patrolPoints[0].transform;
-                        }
+                        destinationPoint = patrolPoints[0].transform;
                     }
                 }
             }

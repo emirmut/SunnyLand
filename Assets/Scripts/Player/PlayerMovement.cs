@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
     // Update is called once per frame
     void Update() { // Used to get Input from the player
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runningSpeed; // Input.GetAxisRaw("Horizontal") returns -1 if left arrow key or A is pressed, 0 if no key is pressed, 1 if right arrow key or D is pressed. See Edit -> Porject Settings -> Input Manager -> Horizontal, Vertical
+        horizontalMove = Input.GetAxisRaw("Horizontal") * runningSpeed; // Input.GetAxisRaw("Horizontal") returns -1 if left arrow key or A is pressed, 0 if no key is pressed, 1 if right arrow key or D is pressed. See Edit -> Project Settings -> Input Manager -> Horizontal, Vertical
         verticalMove = Input.GetAxisRaw("Vertical") * climbingSpeed;
         animator.SetFloat("horizontalSpeed", Mathf.Abs(horizontalMove));
         animator.SetFloat("verticalSpeed", Mathf.Abs(verticalMove));
@@ -39,10 +39,12 @@ public class PlayerMovement : MonoBehaviour
             crouch = false;
         }
 
-        if (Input.GetButton("Jump")) {
+        if (Input.GetButton("Jump") && controller.m_Grounded) {
             jump = true;
             crouch = false;
-            animator.SetBool("isJumping", true);
+            animator.SetBool("isJumpingUp", true);
+            animator.SetBool("isJumpingDown", false);
+            StartCoroutine(controller.ChangeJumpAnimation());
         }
         if (!controller.m_Grounded) {
             crouch = false;
@@ -93,7 +95,12 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public void OnLanding() {
-        animator.SetBool("isJumping", false);
+        if (animator.GetBool("isJumpingUp")) {
+            animator.SetBool("isJumpingUp", false);
+        }
+        if (animator.GetBool("isJumpingDown")) {
+            animator.SetBool("isJumpingDown", false);
+        }
     }
 
     public void OnCrouch(bool isCrouching) {

@@ -330,10 +330,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fec0114af18b6048b68bf98db88eaf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colliders:
+  - {fileID: 155875966149388378}
+  - {fileID: 7989978248545348825}
+  - {fileID: 3423839422461496898}
+  - {fileID: 108366024684099806}
+  animator: {fileID: 4547876232997533332}
   patrolPoints:
   - {fileID: 0}
   - {fileID: 0}
   velocity: 4
+  audioManager: {fileID: 0}
   OnDeathEvent:
     m_PersistentCalls:
       m_Calls:
@@ -353,4 +360,3 @@ MonoBehaviour:
   boxCollider1: {fileID: 7989978248545348825}
   boxCollider2: {fileID: 3423839422461496898}
   capsuleCollider: {fileID: 108366024684099806}
-  opposumAnimator: {fileID: 4547876232997533332}

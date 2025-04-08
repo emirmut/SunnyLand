@@ -65,6 +65,9 @@ TagManager:
   - name: Ladders
     uniqueID: 1349992971
     locked: 0
+  - name: LightningTrap
+    uniqueID: 1820943371
+    locked: 0
   - name: Safe Colliders
     uniqueID: 948068183
     locked: 0

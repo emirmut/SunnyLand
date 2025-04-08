@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    private float currentTimeInSeconds;
+    [HideInInspector] public float currentTimeInSeconds;
     [SerializeField] private int durationInMinutes;
     [SerializeField] private Text currentTimeText;
     private bool isTimerOn;
@@ -28,7 +28,7 @@ public class Timer : MonoBehaviour
         if (isTimerOn) {
             currentTimeInSeconds -= Time.deltaTime;
             TimeSpan time = TimeSpan.FromSeconds(currentTimeInSeconds);
-            if (currentTimeInSeconds > 0) {
+            if (currentTimeInSeconds >= 0) {
                 if (time.Seconds < 10) {
                     currentTimeText.text = "Time left: " + time.Minutes.ToString() + ":" + "0" + time.Seconds.ToString();
                 } else {
