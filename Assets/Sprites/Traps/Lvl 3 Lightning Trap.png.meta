@@ -239,10 +239,10 @@ TextureImporter:
       name: Lvl 3 Lightning Trap_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 84
-        width: 47
-        height: 12
+        x: 0
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -261,10 +261,10 @@ TextureImporter:
       name: Lvl 3 Lightning Trap_1
       rect:
         serializedVersion: 2
-        x: 120
-        y: 84
-        width: 48
-        height: 12
+        x: 96
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -283,10 +283,10 @@ TextureImporter:
       name: Lvl 3 Lightning Trap_2
       rect:
         serializedVersion: 2
-        x: 216
-        y: 84
-        width: 48
-        height: 12
+        x: 192
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,9 +305,9 @@ TextureImporter:
       name: Lvl 3 Lightning Trap_3
       rect:
         serializedVersion: 2
-        x: 311
+        x: 288
         y: 0
-        width: 57
+        width: 96
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -327,9 +327,9 @@ TextureImporter:
       name: Lvl 3 Lightning Trap_4
       rect:
         serializedVersion: 2
-        x: 407
+        x: 384
         y: 0
-        width: 58
+        width: 96
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -349,9 +349,9 @@ TextureImporter:
       name: Lvl 3 Lightning Trap_5
       rect:
         serializedVersion: 2
-        x: 503
+        x: 480
         y: 0
-        width: 58
+        width: 96
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -371,9 +371,9 @@ TextureImporter:
       name: Lvl 3 Lightning Trap_6
       rect:
         serializedVersion: 2
-        x: 599
+        x: 576
         y: 0
-        width: 58
+        width: 96
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -393,9 +393,9 @@ TextureImporter:
       name: Lvl 3 Lightning Trap_7
       rect:
         serializedVersion: 2
-        x: 695
+        x: 672
         y: 0
-        width: 58
+        width: 96
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -415,9 +415,9 @@ TextureImporter:
       name: Lvl 3 Lightning Trap_8
       rect:
         serializedVersion: 2
-        x: 791
+        x: 768
         y: 0
-        width: 58
+        width: 96
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -437,9 +437,9 @@ TextureImporter:
       name: Lvl 3 Lightning Trap_9
       rect:
         serializedVersion: 2
-        x: 887
+        x: 864
         y: 0
-        width: 58
+        width: 96
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -459,9 +459,9 @@ TextureImporter:
       name: Lvl 3 Lightning Trap_10
       rect:
         serializedVersion: 2
-        x: 984
+        x: 960
         y: 0
-        width: 57
+        width: 96
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -481,9 +481,9 @@ TextureImporter:
       name: Lvl 3 Lightning Trap_11
       rect:
         serializedVersion: 2
-        x: 1080
+        x: 1056
         y: 0
-        width: 56
+        width: 96
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -503,9 +503,9 @@ TextureImporter:
       name: Lvl 3 Lightning Trap_12
       rect:
         serializedVersion: 2
-        x: 1176
+        x: 1152
         y: 0
-        width: 56
+        width: 96
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -525,9 +525,9 @@ TextureImporter:
       name: Lvl 3 Lightning Trap_13
       rect:
         serializedVersion: 2
-        x: 1272
+        x: 1248
         y: 0
-        width: 56
+        width: 96
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -547,9 +547,9 @@ TextureImporter:
       name: Lvl 3 Lightning Trap_14
       rect:
         serializedVersion: 2
-        x: 1367
+        x: 1344
         y: 0
-        width: 57
+        width: 96
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -569,9 +569,9 @@ TextureImporter:
       name: Lvl 3 Lightning Trap_15
       rect:
         serializedVersion: 2
-        x: 1463
+        x: 1440
         y: 0
-        width: 58
+        width: 96
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -591,9 +591,9 @@ TextureImporter:
       name: Lvl 3 Lightning Trap_16
       rect:
         serializedVersion: 2
-        x: 1559
+        x: 1536
         y: 0
-        width: 58
+        width: 96
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -613,9 +613,9 @@ TextureImporter:
       name: Lvl 3 Lightning Trap_17
       rect:
         serializedVersion: 2
-        x: 1655
+        x: 1632
         y: 0
-        width: 58
+        width: 96
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -635,10 +635,10 @@ TextureImporter:
       name: Lvl 3 Lightning Trap_18
       rect:
         serializedVersion: 2
-        x: 1751
-        y: 69
-        width: 49
-        height: 27
+        x: 1728
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -657,10 +657,10 @@ TextureImporter:
       name: Lvl 3 Lightning Trap_19
       rect:
         serializedVersion: 2
-        x: 1847
-        y: 83
-        width: 48
-        height: 13
+        x: 1824
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -679,10 +679,10 @@ TextureImporter:
       name: Lvl 3 Lightning Trap_20
       rect:
         serializedVersion: 2
-        x: 1943
-        y: 84
-        width: 48
-        height: 12
+        x: 1920
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -701,10 +701,10 @@ TextureImporter:
       name: Lvl 3 Lightning Trap_21
       rect:
         serializedVersion: 2
-        x: 2040
-        y: 84
-        width: 47
-        height: 12
+        x: 2016
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -715,160 +715,6 @@ TextureImporter:
       bones: []
       spriteID: 09ef17de2f7fa664dac3f900b5b085ea
       internalID: 786416752
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lvl 3 Lightning Trap_22
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 0
-        width: 56
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4129a1301ea1e534f8ccc70656b65686
-      internalID: 1074643123
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lvl 3 Lightning Trap_23
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 0
-        width: 56
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a1db71a25d2ece649907137254c7392d
-      internalID: 802392223
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lvl 3 Lightning Trap_24
-      rect:
-        serializedVersion: 2
-        x: 216
-        y: 0
-        width: 56
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 18d2be7a458210e418cc2d9c6474bd36
-      internalID: -1778264846
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lvl 3 Lightning Trap_25
-      rect:
-        serializedVersion: 2
-        x: 1751
-        y: 0
-        width: 58
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: afb756bf98deb934eb6dcb2069e5b1a1
-      internalID: 1231039963
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lvl 3 Lightning Trap_26
-      rect:
-        serializedVersion: 2
-        x: 1847
-        y: 0
-        width: 58
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d037014743d65744fb2fe6cae8f3dbc1
-      internalID: -88577280
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lvl 3 Lightning Trap_27
-      rect:
-        serializedVersion: 2
-        x: 1943
-        y: 0
-        width: 58
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e75f7e6888e92cc4a8da8b4a395c3317
-      internalID: -2042375553
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lvl 3 Lightning Trap_28
-      rect:
-        serializedVersion: 2
-        x: 2040
-        y: 0
-        width: 57
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c4f6abcb91b4b0c40bb31a996d560ece
-      internalID: 158951211
       vertices: []
       indices: 
       edges: []
@@ -902,13 +748,6 @@ TextureImporter:
       Lvl 3 Lightning Trap_2: -1818298418
       Lvl 3 Lightning Trap_20: 153476324
       Lvl 3 Lightning Trap_21: 786416752
-      Lvl 3 Lightning Trap_22: 1074643123
-      Lvl 3 Lightning Trap_23: 802392223
-      Lvl 3 Lightning Trap_24: -1778264846
-      Lvl 3 Lightning Trap_25: 1231039963
-      Lvl 3 Lightning Trap_26: -88577280
-      Lvl 3 Lightning Trap_27: -2042375553
-      Lvl 3 Lightning Trap_28: 158951211
       Lvl 3 Lightning Trap_3: 1331821298
       Lvl 3 Lightning Trap_4: 1910997076
       Lvl 3 Lightning Trap_5: 1327247449

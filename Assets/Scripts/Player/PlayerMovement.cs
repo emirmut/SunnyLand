@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     [SerializeField] private GameOverScreen gameOverScreen;
     [SerializeField] private AudioManager audioManager;
+    [SerializeField] private GameObject gameOverScreenUI;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -86,12 +87,14 @@ public class PlayerMovement : MonoBehaviour
 
     // Used for physics-related updates
     void FixedUpdate() { // Used to apply the input to the player
-        // if (controller.m_lives > 0) {
+        if (controller.m_lives > 0) {
             controller.Move(horizontalMove * Time.fixedDeltaTime, verticalMove * Time.fixedDeltaTime, crouch, jump, lookingUp, climb); // Time.fixedDeltaTime allows us to move the player at a constant speed
             jump = false;
-        // } else {
-        //     gameOverScreen.GameOver();
-        // }
+        } else {
+            if (!gameOverScreenUI.activeInHierarchy) {
+                gameOverScreen.GameOver();
+            }
+        }
     }
 
     public void OnLanding() {

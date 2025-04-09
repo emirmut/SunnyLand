@@ -200,10 +200,10 @@ TextureImporter:
       name: Lvl 2 Lightning Trap_0
       rect:
         serializedVersion: 2
-        x: 43
-        y: 84
-        width: 10
-        height: 12
+        x: 0
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -222,10 +222,10 @@ TextureImporter:
       name: Lvl 2 Lightning Trap_1
       rect:
         serializedVersion: 2
-        x: 139
-        y: 84
-        width: 10
-        height: 12
+        x: 96
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,10 +244,10 @@ TextureImporter:
       name: Lvl 2 Lightning Trap_2
       rect:
         serializedVersion: 2
-        x: 235
-        y: 83
-        width: 10
-        height: 13
+        x: 192
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,9 +266,9 @@ TextureImporter:
       name: Lvl 2 Lightning Trap_3
       rect:
         serializedVersion: 2
-        x: 321
+        x: 288
         y: 0
-        width: 32
+        width: 96
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -288,9 +288,9 @@ TextureImporter:
       name: Lvl 2 Lightning Trap_4
       rect:
         serializedVersion: 2
-        x: 421
+        x: 384
         y: 0
-        width: 28
+        width: 96
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -310,9 +310,9 @@ TextureImporter:
       name: Lvl 2 Lightning Trap_5
       rect:
         serializedVersion: 2
-        x: 517
+        x: 480
         y: 0
-        width: 28
+        width: 96
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -332,9 +332,9 @@ TextureImporter:
       name: Lvl 2 Lightning Trap_6
       rect:
         serializedVersion: 2
-        x: 609
+        x: 576
         y: 0
-        width: 32
+        width: 96
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -354,9 +354,9 @@ TextureImporter:
       name: Lvl 2 Lightning Trap_7
       rect:
         serializedVersion: 2
-        x: 705
+        x: 672
         y: 0
-        width: 32
+        width: 96
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -376,9 +376,9 @@ TextureImporter:
       name: Lvl 2 Lightning Trap_8
       rect:
         serializedVersion: 2
-        x: 805
+        x: 768
         y: 0
-        width: 28
+        width: 96
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -398,9 +398,9 @@ TextureImporter:
       name: Lvl 2 Lightning Trap_9
       rect:
         serializedVersion: 2
-        x: 901
+        x: 864
         y: 0
-        width: 28
+        width: 96
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -420,9 +420,9 @@ TextureImporter:
       name: Lvl 2 Lightning Trap_10
       rect:
         serializedVersion: 2
-        x: 993
+        x: 960
         y: 0
-        width: 32
+        width: 96
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -442,10 +442,10 @@ TextureImporter:
       name: Lvl 2 Lightning Trap_11
       rect:
         serializedVersion: 2
-        x: 1099
-        y: 83
-        width: 10
-        height: 13
+        x: 1056
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -456,94 +456,6 @@ TextureImporter:
       bones: []
       spriteID: 278fd29a49b159c448a5fe94ead7e155
       internalID: -66769420
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lvl 2 Lightning Trap_12
-      rect:
-        serializedVersion: 2
-        x: 43
-        y: 0
-        width: 22
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dc98ad279c027664386ace2767a1714b
-      internalID: 1065604401
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lvl 2 Lightning Trap_13
-      rect:
-        serializedVersion: 2
-        x: 139
-        y: 0
-        width: 22
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f23b2d74872cc77468bd0d0b3fa4fe74
-      internalID: 1647153270
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lvl 2 Lightning Trap_14
-      rect:
-        serializedVersion: 2
-        x: 235
-        y: 0
-        width: 22
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b887a28a34df0ab4dadf2e7e7b2b2b1f
-      internalID: 5678602
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lvl 2 Lightning Trap_15
-      rect:
-        serializedVersion: 2
-        x: 1099
-        y: 0
-        width: 22
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aa9ebeb725d86c04394df9897809c489
-      internalID: -28676800
       vertices: []
       indices: 
       edges: []
@@ -566,10 +478,6 @@ TextureImporter:
       Lvl 2 Lightning Trap_1: -959285081
       Lvl 2 Lightning Trap_10: -452871929
       Lvl 2 Lightning Trap_11: -66769420
-      Lvl 2 Lightning Trap_12: 1065604401
-      Lvl 2 Lightning Trap_13: 1647153270
-      Lvl 2 Lightning Trap_14: 5678602
-      Lvl 2 Lightning Trap_15: -28676800
       Lvl 2 Lightning Trap_2: -432723531
       Lvl 2 Lightning Trap_3: -1384731250
       Lvl 2 Lightning Trap_4: 453599754

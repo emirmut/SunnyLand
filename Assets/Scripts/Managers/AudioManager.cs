@@ -31,7 +31,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip optionsElementClicked; //
     public AudioClip spikeInteraction; //
     public AudioClip toggleButtonOn; //
-    public AudioClip lightningTrapInteraction; 
+    public AudioClip lightningTrapInteraction; //
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {

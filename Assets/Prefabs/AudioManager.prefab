@@ -719,3 +719,4 @@ MonoBehaviour:
   optionsElementClicked: {fileID: 8300000, guid: d0db35c74d516344b995612108697665, type: 3}
   spikeInteraction: {fileID: 8300000, guid: 7dfe307fb6e51084cb9d11a6d7276c31, type: 3}
   toggleButtonOn: {fileID: 8300000, guid: 1c2d9d740fbf18b408645c3ac389f587, type: 3}
+  lightningTrapInteraction: {fileID: 8300000, guid: cc60df44a533f8f48a086b9f0263a729, type: 3}

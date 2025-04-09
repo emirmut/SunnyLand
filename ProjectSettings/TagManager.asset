@@ -13,6 +13,8 @@ TagManager:
   - Owl
   - Ghost
   - Frog
+  - Gem
+  - Cherry
   layers:
   - Default
   - TransparentFX

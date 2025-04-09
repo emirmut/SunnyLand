@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2342136361925842061}
   m_Layer: 0
   m_Name: Cherry
-  m_TagString: Untagged
+  m_TagString: Cherry
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1338722943
-  m_SortingLayer: 11
+  m_SortingLayer: 12
   m_SortingOrder: 0
   m_Sprite: {fileID: -90375647409325229, guid: 925ec2eb72c5d6744841f75c5a58d81a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -161,3 +161,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 3474081721008692740}
+  audioManager: {fileID: 0}
+  cherryCounterText: {fileID: 0}
+  gemCounterText: {fileID: 0}
